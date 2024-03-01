@@ -34,18 +34,16 @@ progress_bar() {
 # Function to update the script
 update_script() {
   echo "Checking for updates..."
-  new_script_url="https://github.com/EstProject01/ExclusiveAutoUp/blob/main/coba3.sh"  # Replace with the actual URL of your updated script
-  new_script_content=$(curl -s $new_script_url)
+  new_script_url="https://github.com/EstProject01/ExclusiveAutoUp/coba3.sh"  # Ganti dengan URL skrip terbaru
   
-  if [ -n "$new_script_content" ]; then
-    echo "Updating the script..."
-    echo "$new_script_content" > updated_script.sh
-    mv updated_script.sh $0
-    chmod +x $0
+  # Print the curl command for debugging
+  echo "Curl command: curl -s -o updated_script.sh $new_script_url"
+  
+  if curl -s -o updated_script.sh $new_script_url; then
     echo "Update complete. Please run the script again."
     exit 0
   else
-    echo "No updates available."
+    echo "No updates available or error during update."
   fi
 }
 
@@ -58,7 +56,7 @@ fi
 display_message "EXCLUSIVE GAMING OPTIMIZER" 2
 
 echo ""
-echo "| Version: 5.0 | Developer: @EstProject01 | Credit: @EstProject01 | Build Release: 28/02/2024 | Upload Time: ? |"
+echo "| Version: 4.0 | Developer: @EstProject01 | Credit: @EstProject01 | Build Release: 28/02/2024 | Upload Time: ? |"
 echo ""
 sleep 3
 
