@@ -34,7 +34,7 @@ progress_bar() {
 # Function to update the script
 update_script() {
   echo "Checking for updates..."
-  new_script_url="URL_TO_YOUR_NEW_SCRIPT"  # Replace with the actual URL of your updated script
+  new_script_url="https://github.com/EstProject01/ExclusiveAutoUp/blob/main/coba3.sh"  # Replace with the actual URL of your updated script
   new_script_content=$(curl -s $new_script_url)
   
   if [ -n "$new_script_content" ]; then
@@ -58,7 +58,7 @@ fi
 display_message "EXCLUSIVE GAMING OPTIMIZER" 2
 
 echo ""
-echo "| Version: 4.0 | Developer: @EstProject01 | Credit: @EstProject01 | Build Release: 28/02/2024 | Upload Time: ? |"
+echo "| Version: 5.0 | Developer: @EstProject01 | Credit: @EstProject01 | Build Release: 28/02/2024 | Upload Time: ? |"
 echo ""
 sleep 3
 
